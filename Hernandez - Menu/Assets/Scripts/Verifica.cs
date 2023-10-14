@@ -61,6 +61,8 @@ public class Verifica : MonoBehaviour
         {
             this.chaveInv.SetActive(true);
             this.chaveTrio.SetActive(false);
+            Actions.OnStoryAdvanced(10);
+            
         }
     }
 
@@ -87,6 +89,7 @@ public class Verifica : MonoBehaviour
             this.openCadeado.SetActive(false);
             this.numeroChaves++;
             cadeadoVerificado = true;
+            Actions.OnStoryAdvanced(9);
         }
     }
 

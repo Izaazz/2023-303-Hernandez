@@ -261,12 +261,14 @@ public class DisplayImage : MonoBehaviour
 
     public void TurnOnNiver()
     {
+        this.botoesP1.SetActive(false);
         this.niverTVBase.SetActive(true);
         this.closeNiverTVBase.SetActive(true);
     }
 
     public void TurnOffNiver()
     {
+        this.botoesP1.SetActive(true);
         this.niverTVBase.SetActive(false);
         this.closeNiverTVBase.SetActive(false);
     }

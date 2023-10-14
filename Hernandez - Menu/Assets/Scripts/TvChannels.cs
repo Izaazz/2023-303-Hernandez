@@ -21,7 +21,7 @@ public class TvChannels : MonoBehaviour
         redRotation = this.redButton.transform.localRotation.eulerAngles.z;
         blueRotation = this.blueButton.transform.localRotation.eulerAngles.z;
 
-        if((blueRotation > 295 && blueRotation < 310 || blueRotation > 115 && blueRotation < 130)&&(redRotation > 125 && redRotation < 145 || redRotation > 305 && redRotation < 325)){
+        if((blueRotation > 290 && blueRotation < 315 || blueRotation > 110 && blueRotation < 135)&&(redRotation > 120 && redRotation < 150 || redRotation > 300 && redRotation < 330)){
             this.displayImage.TurnOffTV();
             this.tvCrash.SetActive(false);
             this.secret.SetActive(false);
@@ -36,6 +36,7 @@ public class TvChannels : MonoBehaviour
             this.displayImage.TurnOffTV();
             this.tvCrash.SetActive(false);
             this.secret.SetActive(true);
+            this.tvNiver.SetActive(false);
     
         } else{
             //pra impedir que algum engracadinho fique testando posicoes aleatorias
@@ -44,6 +45,7 @@ public class TvChannels : MonoBehaviour
 
                 this.tvCrash.SetActive(true);
                 this.secret.SetActive(false);
+                this.tvNiver.SetActive(false);
         }
     }
 }

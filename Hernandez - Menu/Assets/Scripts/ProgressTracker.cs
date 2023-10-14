@@ -10,10 +10,10 @@ public class ProgressTracker : MonoBehaviour
     //para chamar a função StoryProgress serão utilizados ACTIONS
     //EU VOU CORINGAR HAHAHAHAHAHAHAHHAHAHA
 
-    [SerializeField] bool[] progress = new bool[10];
+    [SerializeField] bool[] progress = new bool[12];
     [SerializeField] TextMeshProUGUI dicas;
     void Start(){
-        this.dicas.text = "Acho que eu deveria tentar restaurar a energia, onde será que está o painel elétrico?";
+        this.dicas.text = "Eu preciso restaurar a energia, talvez o jogo dos 8 me ajude com isso";
     }
 
     private void OnEnable(){
@@ -29,8 +29,10 @@ public class ProgressTracker : MonoBehaviour
     public void StoryProgress(int progressNum){
 
         this.progress[progressNum] = true;
+        Debug.Log("aqui o ");
+        Debug.Log(progressNum);
 
-        for(int i = 0; i<10; i++){
+        for(int i = 0; i<=10; i++){
             
             if(this.progress[i]){
 
@@ -55,13 +57,13 @@ public class ProgressTracker : MonoBehaviour
                 this.dicas.text = "Parece que a TV ligou, como devo sintonizá-la para prosseguir?";
                 break;
             case 2:
-                this.dicas.text = "Esse vídeo parece me dar uma dica, talvez algo relacionado a data de gravação";
+                this.dicas.text = "Esse vídeo parece me dar alguma dica sobre a senha da cômoda, talvez algo relacionado a data de gravação";
                 break;
             case 3:
-                this.dicas.text = "Vi alguém usando um martelo para quebrar algo há pouco, devo fazer o mesmo?";
+                this.dicas.text = "Os post-its perto do computador mostram um martelo quebrando algo, talvez seja uma dica";
                 break;
             case 4:
-                this.dicas.text = "Onde devo encaixar essa lâmpada UV? Será que há algum abajur por perto?";
+                this.dicas.text = "O que devo fazer com essa lâmpada UV? Será que há algum abajur por perto?";
                 break;
             case 5:
                 this.dicas.text = "Algo apareceu nesses papéis perto do abajur... uma senha? Onde devo usá-la?";
@@ -70,13 +72,16 @@ public class ProgressTracker : MonoBehaviour
                 this.dicas.text = "Esse áudio no computador se refere a um quadro, lembro de ter visto um por aqui";
                 break;
             case 7:
-                this.dicas.text = "O poema parece contar uma história, será que tem relação com aquelas imagens do varal ao lado da porta?";
+                this.dicas.text = "O poema parece contar uma história, será que tem relação com aquelas fotos do varal ao lado da porta?";
                 break;
             case 8:
                 this.dicas.text = "Os símbolos dos livros se parecem com os símbolos do cadeado ao lado do computador";
                 break;
              case 9:
                 this.dicas.text = "Talvez eu devesse procurar outra parte da chave em algum lugar, será que é algo relacionado ao computador?";
+                break;
+            case 10:
+                this.dicas.text = "O medalhão com um K parece encaixar perfeitamente na porta";
                 break;
         }
     }

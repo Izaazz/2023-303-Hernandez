@@ -48,7 +48,7 @@ public class TextoComputador : MonoBehaviour
     }
 
     public void VerificaSenha(string senha){
-        if(senha == senhaArquivo){
+        if(senha.ToUpper() == senhaArquivo.ToUpper()){
             this.resposta.SetActive(true);
             this.block.SetActive(false);
             Actions.OnStoryAdvanced(7);
@@ -56,7 +56,7 @@ public class TextoComputador : MonoBehaviour
     }
 
     public void VerificaSenhaUser(string senha){
-        if(senha == senhaComputador){
+        if(senha.ToUpper() == senhaComputador.ToUpper()){
             this.areaDeTrabalho.SetActive(true);
             this.telaDeBloqueio.SetActive(false);
             acessado = true;
